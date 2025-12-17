@@ -24,3 +24,5 @@ console.log(undefined >= 0);
 // check for the datatype also along with the value
 
 console.log("2" === 2); // false ( datatype not same)
+
+
