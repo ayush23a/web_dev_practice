@@ -26,18 +26,23 @@ console.log(NewUser.lastIndexOf('a')); // returns the last occurence of a substr
 const newName = "    ayush world    "
 console.log(newName);
 console.log(newName.trim()); // removes extra white spaces from the start & end of string
+console.log(newName.trimEnd());
+console.log(newName.trimStart());
+
 
 const url = "https://www.ayush&23aman.vercel.com"
 
-console.log(url.replace("&23", "-")); // replace any literal with the new provided
+// console.log(url.replace("&23", "-")); // replace any literal with the new provided
 
-console.log(url.includes('pankaj')); // return type: bool; check whether a substring is present or not
+// console.log(url.includes('pankaj')); // return type: bool; check whether a substring is present or not
 
 
 var getName = name
 getName = "ayush-yes-new"
-console.log(getName.split('-'));
-console.log(NewUser.split('a'));
+// console.log(getName.split('-'));
+// console.log(NewUser.split('a'));
+
+
 
 
 
