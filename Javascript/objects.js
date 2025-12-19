@@ -1,4 +1,8 @@
-// singleton 
+// two types of objects : singleton and literals
+// singleton : defined usign constructors
+// literals: normal definition
+
+const { use } = require("react");
 
 
 // literals
@@ -50,6 +54,19 @@ JSuser.greeting2 = function(){
 
 console.log(JSuser.greeting());
 console.log(JSuser.greeting2());
+
+// ===================================================
+// Singleton Objects
+
+// const user = new Object() // singleton definition
+
+const user = {} // non singleton def
+
+user.name = "aman"
+user.email = 'asdf@jhg.com'
+user.isLoggedIn = false
+
+console.log(user);
 
 
 
