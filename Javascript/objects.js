@@ -135,8 +135,51 @@ console.log(user.hasOwnProperty("isLogged")); // returns bool
 
 
 
+// ----------------------------
+// Object de-structure
+
+const course = {
+    courseName: "web dev", 
+    courseInstructor : "chai aur code",
+    price : 999,
+
+}
+
+// course.courseInstructor -> this is also correct
+/*
+but we have to use course.courseInst repeatedly if we want multiple times response. 
+so to prevent this object destructure method is used. 
+In this object is called like 
+// const {method_to_be_called} = object_name
+
+inside {} write the method which is to be called repeatedly or frequently
+
+we can also create an alias of the method so called if the method_name is complex
+this can be done by using : after method_name and assigning the alias name
+*/
+
+const {courseInstructor : Instructor} = course  // de-structure the object
+// here courseInstructor is method_name , Instructor is alias
+
+console.log(Instructor);
+
+// JSON format API
+
+// {
+//     "name" : "ayush", 
+//     "courseName" : "webdev",
+//     "price" : 999
+// }
 
 
+// some API are in format of arrays also
+
+
+// [
+//     {},
+//     {},
+//     {}
+// ]
 
 
 
