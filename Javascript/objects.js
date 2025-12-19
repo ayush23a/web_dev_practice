@@ -2,8 +2,6 @@
 // singleton : defined usign constructors
 // literals: normal definition
 
-const { use } = require("react");
-
 
 // literals
 const mySym = Symbol("key1")
@@ -66,7 +64,76 @@ user.name = "aman"
 user.email = 'asdf@jhg.com'
 user.isLoggedIn = false
 
-console.log(user);
+// console.log(user);
+
+// similar to arrays , we can create nested objects also
+
+const regularUser = {
+    id : "123hjds",
+    name : {
+        fullName : {
+            firstName : "aysuh",  // nested objects
+            lastName : "aman"
+        }
+    },
+    hasApplied : true,
+    email : "hgcvdycgv@gmail.com"
+
+}
+
+// console.log(regularUser.name.fullName.lastName); 
+
+const obj1 = { 1: "a", 2 : "b"}
+const obj2 = { 3: "a", 4 : "b"}
+const obj3 = { 5: "a", 6 : "b"}
+
+// const obj4 = {obj1, obj2, obj3} // returns nested objects by treating each obj as an element
+
+/*
+{
+  obj1: { '1': 'a', '2': 'b' },
+  obj2: { '3': 'a', '4': 'b' },
+  obj3: { '5': 'a', '6': 'b' }
+}
+*/
+
+
+// to concatenate diff obj into one
+// const obj4 = Object.assign({}, obj1, obj2, obj3) 
+
+const obj4 = {...obj1, ...obj2, ...obj3} // spread method { '1': 'a', '2': 'b', '3': 'a', '4': 'b', '5': 'a', '6': 'b' }
+// console.log(obj4); // { '1': 'a', '2': 'b', '3': 'a', '4': 'b', '5': 'a', '6': 'b' }
+
+/*
+Object.assign(target, source)
+so generally we prefer to use {} as the target and diff objs to be concatenated as the sources
+in prod grade programming
+so Object.assign({}, obj1, obj2, obj3) 
+-> {}: target
+-> obj1, obj2, obj3 : sources
+*/
+
+
+const emp = [
+    personalDetails = {
+        name : "ayush",
+        email : "aman@237hsh.com",
+    },
+    isLoggedIn = false, 
+]
+
+
+console.log(emp[0].name);  // using index identufy the object and then using (.) call the properties
+// console.log(emp.map()); 
+
+console.log(Object.keys(user)); // returns array of all the keys
+console.log(Object.values(user)); // array of all the values only
+console.log(Object.entries(user)); // array of key - value pair
+
+// to check if a property is present in the object or not
+console.log(user.hasOwnProperty("isLogged")); // returns bool
+
+
 
 
 
